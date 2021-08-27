@@ -1,6 +1,8 @@
 import sys
 import pygame
 
+# комент для теста
+
 
 class SpaceInvaders:
     def __init__(self):
