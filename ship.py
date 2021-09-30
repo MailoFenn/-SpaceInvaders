@@ -16,7 +16,8 @@ class Ship:
         self.moving_left = False
 
     def update(self):
-        if self.moving_right and self.x < self.screen_rect.right - 100:
+        if self.moving_right and self.x < (self.screen_rect.right -
+                                           self.rect.width):
             self.x += self.settings.ship_speed
         elif self.moving_left and self.x > 0:
             self.x -= self.settings.ship_speed
