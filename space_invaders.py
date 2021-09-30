@@ -68,6 +68,10 @@ class SpaceInvaders:
             if bullet.rect.bottom <= 0:
                 self.bullets.remove(bullet)
 
+        collisions = pygame.sprite.groupcollide(
+            self.bullets, self.aliens, True, True
+        )
+
     def _update_aliens(self):
         self._check_fleet_edges()
         self.aliens.update()
